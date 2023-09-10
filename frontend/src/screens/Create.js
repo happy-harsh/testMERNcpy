@@ -20,7 +20,7 @@ const Create = () => {
       age:input.age,
       email:input.email
     };
-    axios.post("https://test-og-mern.onrender.com/api/createUser",userData).then((res)=>{
+    axios.post("https://mernbyharsh.onrender.com/api/createUser",userData).then((res)=>{
       console.log(res.data)
     }).catch((error)=>{
       console.log(error);

@@ -11,7 +11,7 @@ const View = () => {
 
   useEffect(() => {
     axios
-      .get("https://test-og-mern.onrender.com/api/getUser")
+      .get("https://mernbyharsh.onrender.com/api/getUser")
       .then((res) => {
         const ans = res.data;
         setGetData(ans);
@@ -22,7 +22,7 @@ const View = () => {
   }, [getData]);
 
   const deleteUser = async (id)=>{
-    await axios.delete(`https://test-og-mern.onrender.com/api/deleteUser/${id}`).then(()=>{
+    await axios.delete(`https://mernbyharsh.onrender.com/api/deleteUser/${id}`).then(()=>{
       alert("User deleted successfully")
       setGetData(getData.filter((data)=>data._id !==data.id));
     }).catch((error)=>{
